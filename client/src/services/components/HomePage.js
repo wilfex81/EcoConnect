@@ -1,16 +1,14 @@
-// src/components/HomePage.js
-
 import React from 'react';
 import './HomePage.css'; // Import your CSS file for styling
 
 function HomePage() {
     return (
         <div className="home-page">
-            <header>
+            <header className="header">
                 <h1>Welcome to EcoConnect</h1>
                 <p>A platform for eco-friendly enthusiasts</p>
             </header>
-            <main>
+            <main className="main-content">
                 <section className="features">
                     <h2>Features</h2>
                     <ul>
@@ -24,7 +22,7 @@ function HomePage() {
                     <p>EcoConnect is dedicated to creating a sustainable future by connecting individuals, communities, and organizations committed to environmental conservation and eco-friendly practices.</p>
                 </section>
             </main>
-            <footer>
+            <footer className="footer">
                 <p>&copy; 2024 EcoConnect. All rights reserved.</p>
             </footer>
         </div>

@@ -1,0 +1,31 @@
+/* Add your styles to a new CSS file, e.g., Navbar.css */
+
+nav {
+    background-color: #333; /* Background color of the navbar */
+    padding: 10px 20px; /* Padding around the navbar */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styles */
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+a {
+    color: white; /* Text color of the links */
+    text-decoration: none; /* Remove underline from the links */
+    font-weight: bold; /* Make the font bold */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
