@@ -1,0 +1,8 @@
+site_name: EcoConnect
+site_url: http://127.0.0.1:8000/
+nav:
+  - Home: index.md
+  - About: about.md
+theme:
+  name: material
+# theme: readthedocs
