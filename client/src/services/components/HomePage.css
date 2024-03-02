@@ -1,0 +1,59 @@
+/* src/components/HomePage.css */
+
+.home-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+header p {
+    color: #666;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features {
+    margin-bottom: 40px;
+}
+
+.features h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #666;
+}
+
+footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
