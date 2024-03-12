@@ -60,3 +60,6 @@ def events(request):
     }
     
     return render(request,'events.html',context)
+
+def community(request):
+    pass
