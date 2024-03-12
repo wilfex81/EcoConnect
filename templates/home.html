@@ -3,122 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to EcoConnect</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Optional: Add custom styles -->
+    <title>EcoConnect | Home</title>
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
         }
-        .navbar {
-            background-color: #2d9f5f;
-        }
-        .navbar-brand, .navbar-nav .nav-link {
-            color: white;
-        }
-        .jumbotron {
-            background-color: #2d9f5f;
-            color: white;
+        nav {
+            background-color: #009688;
+            padding: 10px 20px;
             text-align: center;
-            border-radius: 0;
-            margin-bottom: 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         .section {
-            padding: 50px 0;
+            width: 100%;
+            padding: 20px;
         }
-        .footer {
-            background-color: #2d9f5f;
-            color: white;
-            padding: 20px 0;
+        .landing-page {
+            height: calc(100vh - 60px); /* Adjusting for the navbar height */
+            background-image: url('https://source.unsplash.com/random/1920x1080'); /* Random image with dimensions 1920x1080 */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .events, .projects, .communities {
+            display: flex;
+            align-items: center;
+            height: 100vh; /* Occupy full viewport height */
+        }
+        .events .content, .projects .content, .communities .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .events .image, .projects .image, .communities .image {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .events .image img, .projects .image img, .communities .image img {
+            max-width: 100%;
+            max-height: 100%; /* Make image occupy full height */
+            width: auto;
+            height: auto;
+        }
+        h2 {
+            color: #009688;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #009688;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+        footer.show {
+            visibility: visible;
+            opacity: 1;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container">
-        <a class="navbar-brand" href="#">EcoConnect</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
-                </li>
-            </ul>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#projects">Projects</a>
+        <a href="#communities">Communities</a>
+    </nav>
+    <div id="home" class="section landing-page">
+        <h2>Welcome to EcoConnect</h2>
+        <p>Discover eco-friendly events and initiatives near you.</p>
+        <p>Join our community and make a positive impact on the environment.</p>
+    </div>
+    <div id="events" class="section events">
+        <div class="content">
+            <h2>Events</h2>
+            <p>Check out our upcoming events.</p>
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/random/1200x800?sig=1" alt="Events Image">
         </div>
     </div>
-</nav>
-{% if messages %}
-<div class="messages">
-{% for message in messages %}
-    <div class="alert {% if message.tags %}alert-{{ message.tags }}"{% endif %}>
-        {{ message }}
-    </div>
-{% endfor %}
-</div>
-{% endif %}
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="display-4">Welcome to EcoConnect</h1>
-        <p class="lead">Join our community and make a difference for the environment!</p>
-        <hr class="my-4">
-        <p>Explore projects, connect with like-minded individuals, and take action for a sustainable future.</p>
-        <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Get Started</a>
-    </div>
-</div>
-
-<section id="projects" class="section">
-    <div class="container">
-        <h2 class="text-center mb-4">Recent Projects</h2>
-        <!-- Add your recent projects content here -->
-    </div>
-</section>
-
-<section id="testimonials" class="section bg-light">
-    <div class="container">
-        <h2 class="text-center mb-4">Testimonials</h2>
-        <!-- Add your testimonials content here -->
-    </div>
-</section>
-
-<section id="contact" class="section">
-    <div class="container">
-        <h2 class="text-center mb-4">Contact Us</h2>
-        <!-- Add your contact form or contact information here -->
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <p>&copy; 2023 EcoConnect. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-right">
-                <p>Contact: info@ecoconnect.com</p>
-            </div>
+    <div id="projects" class="section projects">
+        <div class="image">
+            <img src="https://source.unsplash.com/random/1200x800?sig=2" alt="Projects Image">
+        </div>
+        <div class="content">
+            <h2>Projects</h2>
+            <p>Explore our ongoing projects focused on sustainability.</p>
         </div>
     </div>
-</footer>
-
-<!-- Include Bootstrap JS (optional, for certain Bootstrap components) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div id="communities" class="section communities">
+        <div class="content">
+            <h2>Communities</h2>
+            <p>Join like-minded individuals in our eco-conscious communities.</p>
+        </div>
+        <div class="image">
+            <img src="https://source.unsplash.com/random/1200x800?sig=3" alt="Communities Image">
+        </div>
+    </div>
+    <footer id="footer">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#privacy">Privacy Policy</a>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            var footer = document.getElementById('footer');
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                footer.classList.add('show');
+            } else {
+                footer.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>

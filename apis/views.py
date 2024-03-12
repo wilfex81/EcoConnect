@@ -30,7 +30,8 @@ class UserLoginAPIView(APIView):
     def post(self, request, *args, **kwargs):
         url, headers, body, status_code = oauth2_settings.OAUTH2_BACKEND.create_token_response(request)
         return Response(body, status=status_code, headers=headers)
-
+    
+    
 class UserProfileListCreate(generics.ListCreateAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer

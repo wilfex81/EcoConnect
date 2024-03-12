@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConnect | Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #009688;
+            padding: 10px 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            margin-top: 60px; /* Adjust according to navbar height */
+            padding-left: 20px;
+            padding-right: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .event-container {
+            width: calc(49% - 20px);
+            margin-bottom: 20px;
+        }
+        .event-container:nth-child(odd) {
+            padding-right: 30px;
+        }
+        .event-container:nth-child(even) {
+            padding-left: 30px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        li {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+        }
+        h2 {
+            color: #009688;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .creator {
+            color: #777;
+        }
+        .participants {
+            font-style: italic;
+        }
+        a {
+            color: #009688;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        {% for event in events %}
+        <div class="event-container">
+            <ul>
+                <li>
+                    <h2>{{ event.name }}</h2>
+                    <p>{{ event.description }}</p>
+                    <p><strong>Location:</strong> {{ event.location }}</p>
+                    <p><strong>Date:</strong> {{ event.date }}</p>
+                    <p><strong>Time:</strong> {{ event.time }}</p>
+                    <p class="creator"><strong>Creator:</strong> {{ event.creator.username }}</p>
+                </li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
