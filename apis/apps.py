@@ -6,5 +6,5 @@ class ApisConfig(AppConfig):
     name = 'apis'
     
     
-    def ready(self):
-        import apis.signals
+    # def ready(self):
+    #     import apis.signals

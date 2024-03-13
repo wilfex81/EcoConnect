@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoConnect | Projects</title>
+    <title>EcoConnect | Communities</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,14 +37,14 @@
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .project-container {
+        .community-container {
             width: calc(49% - 20px);
             margin-bottom: 20px;
         }
-        .project-container:nth-child(odd) {
+        .community-container:nth-child(odd) {
             padding-right: 30px;
         }
-        .project-container:nth-child(even) {
+        .community-container:nth-child(even) {
             padding-left: 30px;
         }
         ul {
@@ -69,29 +69,15 @@
             margin-top: 0;
             margin-bottom: 10px;
         }
-        .creator {
-            color: #777;
-        }
-        .participants {
-            font-style: italic;
-        }
-        a {
-            color: #009688;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .join-button, .participants-button {
+        .join-button {
             background-color: #009688;
             color: #fff;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 10px;
         }
-        .join-button:hover, .participants-button:hover {
+        .join-button:hover {
             background-color: #00796b;
         }
     </style>
@@ -104,20 +90,14 @@
         <a href="{% url 'communities' %}">Communities</a>
     </nav>
     <div class="container">
-        {% for project in projects %}
-        <div class="project-container">
+        {% for community in communities %}
+        <div class="community-container">
             <ul>
                 <li>
-                    <h2>{{ project.name }}</h2>
-                    <p>{{ project.description }}</p>
-                    <p><strong>Start Date:</strong> {{ project.start_date }}</p>
-                    <p><strong>End Date:</strong> {{ project.end_date }}</p>
-                    <button class="participants-button"
-                        onclick="recordParticipation('{{ project.id }}')">Participate</button>
-                    <button class="participants-button"
-                            onclick="cancelParticipation('{{ project.id }}')">Cancel Participation</button>
-                    </li>
-                    </p>
+                    <h2>{{ community.name }}</h2>
+                    <p>{{ community.description }}</p>
+                    <button class="join-button" onclick="joinCommunity('{{ community.id }}')">Join</button>
+                    <button class="join-button" onclick="cancelMembership('{{ community.id }}')">Cancel Membership</button>
                 </li>
             </ul>
         </div>
@@ -125,8 +105,8 @@
     </div>
 
     <script>
-        function recordParticipation(projectId) {
-            fetch(`/participate-in-project/${projectId}/`, {
+        function joinCommunity(communityId) {
+            fetch(`/join-community/${communityId}/`, {
                 method: 'POST',
                 headers: {
                     'X-CSRFToken': '{{ csrf_token }}'
@@ -146,11 +126,11 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred while joining the project.');
+                alert('An error occurred while joining the community.');
             });
         }
-        function cancelParticipation(projectId) {
-            fetch(`/cancel_participation-in-project/${projectId}/`, {
+        function cancelMembership(communityId) {
+            fetch(`/cancel_community-membership/${communityId}/`, {
                 method: 'POST',
                 headers: {
                     'X-CSRFToken': '{{ csrf_token }}'
@@ -170,9 +150,9 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred while canceling the participation');
+                alert('An error occurred while canceling your membership');
             });
         }
-</script>
+    </script>
 </body>
 </html>

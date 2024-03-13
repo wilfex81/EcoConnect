@@ -27,11 +27,17 @@ class Project(models.Model):
     description = models.TextField()
     start_date = models.DateField(default = datetime.datetime.now())
     end_date = models.DateField(default = datetime.datetime.now())
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='created_projects')
-    participants = models.ManyToManyField(User, related_name='joined_projects')
 
     def __str__(self):
         return self.name
+
+class ProjectParticipant(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    joined_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.project.name}"
     
 class Event(models.Model):
     name = models.CharField(max_length=255)
@@ -39,10 +45,18 @@ class Event(models.Model):
     location = models.CharField(max_length=255)
     date = models.DateField()
     time = models.TimeField()
-    creator = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.name
+    
+class EventsParticipants(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    joined_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.event.name}"
+    
     
 class Community(models.Model):
     name = models.CharField(max_length=255)
@@ -50,6 +64,14 @@ class Community(models.Model):
     
     def __str__(self):
         return self.name
+    
+class CommunityMembership(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    community = models.ForeignKey(Community, on_delete=models.CASCADE)
+    joined_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.community.name}"
     
 class Membership(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
