@@ -19,6 +19,12 @@
             position: fixed;
             top: 0;
             z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav .links {
+            display: none;
+            align-items: center;
         }
         nav a {
             color: #fff;
@@ -99,14 +105,29 @@
         footer a:hover {
             text-decoration: underline;
         }
+        .login-link {
+            position: fixed;
+            top: 10px;
+            right: 20px;
+            color: #fff;
+            text-decoration: none;
+            z-index: 100; /* Ensure it's above the navbar */
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'events' %}">Events</a>
-        <a href="{% url 'projects' %}">Projects</a>
-        <a href="{% url 'communities' %}">Communities</a>
+        <div class="links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'events' %}">Events</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'communities' %}">Communities</a>
+        </div>
+        <a href="{% url 'login' %}" class="login-link">Login</a>
     </nav>
     <div id="home" class="section landing-page">
         <h2>Welcome to EcoConnect</h2>

@@ -3,92 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - EcoConnect</title>
-    <!-- Include Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Include Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Google Fonts - Montserrat -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <!-- Custom Styles -->
+    <title>EcoConnect | Login</title>
     <style>
         body {
-            background-color: #f3f5f8;
-            font-family: 'Montserrat', sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        .card {
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
         }
-        .card-header {
-            background-color: #2d9f5f;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 20px 20px 0 0;
-            padding: 20px;
-        }
-        .form-group {
-            margin-bottom: 30px;
-            padding: 0 30px;
-        }
-        .btn-login {
-            background-color: #2d9f5f;
-            border: none;
+        input[type="text"], input[type="password"] {
             width: 100%;
-            padding: 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
-        .btn-login:hover {
-            background-color: #258c54;
+        input[type="submit"] {
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        /* Nature-themed styling */
-        .icon {
-            font-size: 30px;
-            margin-right: 10px;
-            color: #2d9f5f;
+        input[type="submit"]:hover {
+            background-color: #00796b;
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 20px;
+            padding: auto;
+        }
+        .register-link a {
+            color: #009688;
+            text-decoration: none;
+        }
+        .register-link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    <i class="icon fas fa-leaf"></i> Login to EcoConnect <i class="icon fas fa-leaf"></i>
-                </div>
-                <div class="card-body">
-                    <form method="post">
-                        {% csrf_token %}
-                        <div class="form-group">
-                            <label for="id_username">Username</label>
-                            <input type="text" name="username" id="id_username" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="id_password">Password</label>
-                            <input type="password" name="password" id="id_password" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-login">Login</button>
-                    </form>
-                    <div class="mt-3">
-                        <p>Don't have an account? <a href="{% url 'register' %}" class="btn btn-link">Register</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <form action="{% url 'login_submit' %}" method="post">
+            {% csrf_token %}
+            <h2 style="text-align: center;">Login to EcoConnect</h2>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+            <p class="register-link">Don't have an account? <a href="{% url 'registration' %}">Register here</a></p>
+        </form>
     </div>
-</div>
-
-<!-- Include Bootstrap JS (optional, for certain Bootstrap components) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
