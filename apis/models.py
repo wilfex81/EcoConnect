@@ -1,7 +1,10 @@
 from django.utils import timezone
 import datetime
 from django.db import models
-from django.contrib.auth.models import User
+from django.conf import settings
+
+
+User = settings.AUTH_USER_MODEL
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -25,8 +28,8 @@ class Post(models.Model):
 class Project(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    start_date = models.DateField(default = datetime.datetime.now())
-    end_date = models.DateField(default = datetime.datetime.now())
+    start_date = models.DateTimeField(auto_now_add=True)
+    end_date = models.DateTimeField()
 
     def __str__(self):
         return self.name

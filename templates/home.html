@@ -19,12 +19,6 @@
             position: fixed;
             top: 0;
             z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-        }
-        nav .links {
-            display: none;
-            align-items: center;
         }
         nav a {
             color: #fff;
@@ -121,12 +115,10 @@
 </head>
 <body>
     <nav>
-        <div class="links">
             <a href="{% url 'home' %}">Home</a>
             <a href="{% url 'events' %}">Events</a>
             <a href="{% url 'projects' %}">Projects</a>
             <a href="{% url 'communities' %}">Communities</a>
-        </div>
         <a href="{% url 'login' %}" class="login-link">Login</a>
     </nav>
     <div id="home" class="section landing-page">

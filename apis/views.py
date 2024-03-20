@@ -13,24 +13,6 @@ from .serializers import (UserProfileSerializer, PostSerializer, ProjectSerializ
                           EventSerializer, CommunitySerializer,
                           MembershipSerializer, CommentSerializer,
                           LikeSerializer, UserSerializer)
-
-
-class UserRegistrationAPIView(generics.CreateAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-    def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
-        if serializer.is_valid():
-            user = serializer.save()
-            return Response({'user': user.username}, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-class UserLoginAPIView(APIView):
-    def post(self, request, *args, **kwargs):
-        url, headers, body, status_code = oauth2_settings.OAUTH2_BACKEND.create_token_response(request)
-        return Response(body, status=status_code, headers=headers)
-    
     
 class UserProfileListCreate(generics.ListCreateAPIView):
     queryset = UserProfile.objects.all()

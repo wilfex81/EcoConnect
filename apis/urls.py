@@ -7,12 +7,10 @@ from .views import (
     CommunityListCreate, CommunityDetail,
     MembershipListCreate, MembershipDetail,
     CommentListCreate, CommentDetail,
-    LikeListCreate, LikeDetail,UserRegistrationAPIView,UserLoginAPIView
+    LikeListCreate, LikeDetail,
 )
 
 urlpatterns = [
-    path('register/', UserRegistrationAPIView.as_view(), name='user-registration'),
-    path('login/', UserLoginAPIView.as_view(), name='user-login'),
     path('userprofiles/', UserProfileListCreate.as_view(), name='userprofile-list-create'),
     path('userprofiles/<int:pk>/', UserProfileDetail.as_view(), name='userprofile-detail'),
     path('posts/', PostListCreate.as_view(), name='post-list-create'),
