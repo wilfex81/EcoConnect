@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm
+from .forms import RegistrationForm,EventForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -37,7 +37,7 @@ def register_user(request):
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')  # Redirect to login page after successful registration
+            return redirect('login')
     else:
         form = RegistrationForm()
     return render(request, 'registration/registration.html', {'form': form})
@@ -62,6 +62,22 @@ def participate_in_project(request, project_id):
             return JsonResponse({'message': 'Participation recorded successfully.😊'})
         else:
             return JsonResponse({'message': 'Already participating in this project.😁'}, status=400)
+
+def cancel_event_participation(request, event_id):
+    user = request.user
+    try:
+        event = Event.objects.get(pk=event_id)
+    except Event.DoesNotExist:
+        return JsonResponse({'message': 'Event not found.'}, status=404)
+    
+    try:
+        participation = EventsParticipants.objects.get(user=user, event=event)
+    except EventsParticipants.DoesNotExist:
+        return JsonResponse ({'message': 'You are not participating in this event.😭'},status=400)
+    
+    participation.delete()
+    return JsonResponse({'message': 'Participation canceled successfully.😊'})
+    
 
 
 def get_events(request):
@@ -101,22 +117,53 @@ def cancel_project_participation(request, project_id):
     participation.delete()
     return JsonResponse({'message': 'Participation canceled successfully.😊'})
     
-    
-def cancel_event_participation(request, event_id):
-    user = request.user
-    try:
-        event = Event.objects.get(pk=event_id)
-    except Event.DoesNotExist:
-        return JsonResponse({'message': 'Event not found.'}, status=404)
-    
-    try:
-        participation = EventsParticipants.objects.get(user=user, event=event)
-    except EventsParticipants.DoesNotExist:
-        return JsonResponse ({'message': 'You are not participating in this event.😭'},status=400)
-    
-    participation.delete()
-    return JsonResponse({'message': 'Participation canceled successfully.😊'})
-    
+def add_event(request):
+    if request.method == 'POST':
+        form = EventForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('events')
+    else:
+        form = EventForm()
+    return render(request, 'events.html', {'form': form})
+
+def event_details(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+    data = {
+        'id': event.id,
+        'name': event.name,
+        'description': event.description,
+        'location': event.location,
+        'date': event.date,
+        'time': event.time
+    }
+    return JsonResponse(data)
+
+
+def edit_event(request, event_id):
+    event = get_object_or_404(Event, pk=event_id)
+
+    if request.method == 'PUT':
+        form = EventForm(request.POST, instance=event)
+        if form.is_valid():
+            form.save()
+            return JsonResponse({'message': 'Event updated successfully.'})
+        else:
+            return JsonResponse({'error': 'Invalid form data.'}, status=400)
+    else:
+        # Pass event ID in the context to be used in the template
+        context = {'form': EventForm(instance=event), 'event_id': event_id}
+        return render(request, 'events.html', context)
+
+
+def delete_event(request, event_id):
+    # Retrieve the event object from the database
+    event = get_object_or_404(Event, pk=event_id)
+    if request.method == 'POST':
+        event.delete()
+        return redirect('events')
+
+    return render(request, 'events.html', {'event': event})
 
 def get_community(request):
     communities = Community.objects.all()

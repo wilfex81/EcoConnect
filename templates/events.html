@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>EcoConnect | Events</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoConnect | Events</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -94,84 +94,232 @@
         .join-button:hover, .participants-button:hover {
             background-color: #00796b;
         }
+
+        /* Styling for centered button */
+        .add-event-btn {
+            display: block;
+            margin: 20px auto;
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-event-btn:hover {
+            background-color: #00796b;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            overflow: auto;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 8px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
-    </head>
-    <body>
-        <nav>
-            <a href="{% url 'home' %}">Home</a>
-            <a href="{% url 'events' %}">Events</a>
-            <a href="{% url 'projects' %}">Projects</a>
-            <a href="{% url 'communities' %}">Communities</a>
-        </nav>
-        <div class="container">
-            {% for event in events %}
-            <div class="event-container">
-                <ul>
-                    <li>
-                        <h2>{{ event.name }}</h2>
-                        <p>{{ event.description }}</p>
-                        <p><strong>Location:</strong> {{ event.location }}</p>
-                        <p><strong>Date:</strong> {{ event.date }}</p>
-                        <p><strong>Time:</strong> {{ event.time }}</p>
-                        <button class="participants-button"
-                            onclick="recordParticipation('{{ event.id }}')">Participate</button>
-                        <button class="participants-button"
-                            onclick="cancelParticipation('{{ event.id }}')">Cancel Participation</button>
-                    </li>
-                </ul>
-            </div>
-            {% endfor %}
-        </div>
-        <script>
-            function recordParticipation(eventId) {
-                fetch(`/participate-in-event/${eventId}/`, {
-                    method: 'POST',
-                    headers: {
-                        'X-CSRFToken': '{{ csrf_token }}'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        return response.json(); 
-                    } else if (response.status === 400) {
-                        return response.json();
-                    } else {
-                        throw new Error('Network response was not ok.'); 
-                    }
-                })
-                .then(data => {
-                    alert(data.message); 
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while recording participation');
-                });
-            }
+</head>
+<body>
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'events' %}">Events</a>
+    <a href="{% url 'projects' %}">Projects</a>
+    <a href="{% url 'communities' %}">Communities</a>
+</nav>
+<div class="container">
+    {% for event in events %}
+    <div class="event-container">
+        <ul>
+            <li>
+                <h2>{{ event.name }}</h2>
+                <p>{{ event.description }}</p>
+                <p><strong>Location:</strong> {{ event.location }}</p>
+                <p><strong>Date:</strong> {{ event.date }}</p>
+                <p><strong>Time:</strong> {{ event.time }}</p>
+                <button class="participants-button"
+                        onclick="recordParticipation('{{ event.id }}')">Participate</button>
+                <button class="participants-button"
+                        onclick="cancelParticipation('{{ event.id }}')">Cancel Participation</button>
+                <button class="participants-button" onclick="openEditEventModal('{{ event.id }}')">Edit</button>
+                <button class="participants-button" onclick="deleteEvent('{{ event.id }}')">Delete</button>
+            </li>
+        </ul>
+    </div>
+    
+    {% endfor %}
+</div>
+<button class="add-event-btn" id="addEventBtn" onclick="openAddEventModal()">Add New Event</button>
+
+<div id="addEventModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="text-align: center;">Add New Event</h2>
+        <form id="addEventForm" action="{% url 'add_event' %}" method="POST" style="text-align: center;">
+            {% csrf_token %}
+            <label for="name" style="display: block; margin-bottom: 10px;">Name:</label>
+            <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
             
-            function cancelParticipation(eventId) {
-                fetch(`/cancel_participation-in-event/${eventId}/`, {
-                    method: 'POST',
-                    headers: {
-                        'X-CSRFToken': '{{ csrf_token }}'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        return response.json(); 
-                    } else if (response.status === 400) {
-                        return response.json();
-                    } else {
-                        throw new Error('Network response was not ok.'); 
-                    }
-                })
-                .then(data => {
-                    alert(data.message); 
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while canceling the participation');
-                });
+            <label for="description" style="display: block; margin-bottom: 10px;">Description:</label>
+            <textarea id="description" name="description" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"></textarea><br>
+            
+            <label for="location" style="display: block; margin-bottom: 10px;">Location:</label>
+            <input type="text" id="location" name="location" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+            
+            <label for="date" style="display: block; margin-bottom: 10px;">Date:</label>
+            <input type="date" id="date" name="date" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+            
+            <label for="time" style="display: block; margin-bottom: 10px;">Time:</label>
+            <input type="time" id="time" name="time" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+            
+            <input type="submit" class="add-event-btn" value="Submit" style="background-color: #009688; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+        </form>
+    </div>
+</div>
+
+<!-- Modal for editing an event -->
+<div id="editEventModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="text-align: center;">Edit Event</h2>
+        <form id="editEventForm" style="text-align: center;">
+            {% csrf_token %}
+            <!-- Input fields for editing event details will be populated dynamically via JavaScript -->
+        </form>
+    </div>
+</div>
+
+<script>
+        var modal = document.getElementById("addEventModal");
+        var btn = document.getElementById("addEventBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
+        }
+        function openEditEventModal(eventId) {
+            fetch(`/events/${eventId}/details/`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('name').value = data.name;
+                    document.getElementById('description').value = data.description;
+                    document.getElementById('location').value = data.location;
+                    document.getElementById('date').value = data.date;
+                    document.getElementById('time').value = data.time;
+                    // Change form action to edit the existing event
+                    document.getElementById('editEventForm').action = `/events/${eventId}/edit/`;
+                    document.getElementById('addEventModal').style.display = 'block';
+                })
+                .catch(error => console.error('Error:', error));
+        
+            // Remove the event listener from previous calls to prevent multiple listeners
+            document.getElementById('editEventForm').removeEventListener('submit', editEventFormSubmit);
+        
+            // Add event listener for form submission
+            document.getElementById('editEventForm').addEventListener('submit', editEventFormSubmit);
+        }
+        
+        // Function to handle form submission
+        function editEventFormSubmit(event) {
+            event.preventDefault();
+            const eventId = event.target.getAttribute('data-event-id');
+            const formData = new FormData(this);
+            fetch(`/events/${eventId}/edit/`, {
+                method: 'PUT',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+        
+        
+
+        function recordParticipation(eventId) {
+            fetch(`/participate-in-event/${eventId}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json(); 
+                } else if (response.status === 400) {
+                    return response.json();
+                } else {
+                    throw new Error('Network response was not ok.'); 
+                }
+            })
+            .then(data => {
+                alert(data.message); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while recording participation');
+            });
+        }
+        
+        function cancelParticipation(eventId) {
+            fetch(`/cancel_participation-in-event/${eventId}/`, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': '{{ csrf_token }}'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json(); 
+                } else if (response.status === 400) {
+                    return response.json();
+                } else {
+                    throw new Error('Network response was not ok.'); 
+                }
+            })
+            .then(data => {
+                alert(data.message); 
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred while canceling the participation');
+            });
+        }
     </script>
-    </body>
+</body>
 </html>
