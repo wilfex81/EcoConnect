@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (user_login, home, register, get_projects,
                     get_events, get_community, join_community, participate_in_event,
-                    participate_in_project, cancel_event_participation, cancel_project_participation, 
+                    participate_in_project,add_project, edit_project,project_details,cancel_event_participation, cancel_project_participation, 
                     register_user, cancel_community_mebership,add_event,edit_event,event_details
                     )
 
@@ -15,6 +15,11 @@ urlpatterns = [
          participate_in_project, name='participate_in_project'),
     path('cancel_participation-in-project/<int:project_id>/',
          cancel_project_participation, name='cancel_project_participation'),
+    path("add_project/", add_project, name = 'add_project'),
+    path('projects/<int:project_id>/edit/',edit_project, name='edit_project'),
+     path('project/<int:project_id>/details/', project_details, name='project_details'),
+     
+     
     path("events/", get_events, name='events'),
     path('participate-in-event/<int:event_id>/',
          participate_in_event, name='participate_in_event'),
@@ -23,6 +28,8 @@ urlpatterns = [
     path('events/<int:event_id>/edit/', edit_event, name='edit_event'),
     path('cancel_participation-in-event/<int:event_id>/',
          cancel_event_participation, name='cancel_event_participation'),
+    
+    
     path("communities/", get_community, name='communities'),
     path('join-community/<int:community_id>/',
          join_community, name='join_community'),

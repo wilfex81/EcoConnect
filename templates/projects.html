@@ -94,6 +94,52 @@
         .join-button:hover, .participants-button:hover {
             background-color: #00796b;
         }
+
+        .add-project-btn{
+            display: block;
+            margin: 20px auto;
+            background-color: #009688;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;   
+        }
+        .add-project-btn:hover{
+            background-color: #00796b
+        }
+            /* Modal styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                overflow: auto;
+            }
+            .modal-content {
+                background-color: #fefefe;
+                margin: 10% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 80%;
+                border-radius: 8px;
+            }
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
     </style>
 </head>
 <body>
@@ -114,8 +160,9 @@
                     <p><strong>End Date:</strong> {{ project.end_date }}</p>
                     <button class="participants-button"
                         onclick="recordParticipation('{{ project.id }}')">Participate</button>
-                    <button class="participants-button"
-                            onclick="cancelParticipation('{{ project.id }}')">Cancel Participation</button>
+                    <button class="participants-button" onclick="cancelParticipation('{{ project.id }}')">Cancel Participation</button>
+                    <button class="participants-button" onclick="openEditProjectModal('{{ project.id }}', '{{ project.name }}', '{{ project.description }}', '{{ project.start_date }}', '{{ project.end_date }}')">Edit</button>
+                    <button class="participants-button" onclick="deleteProject('{{ project.id }}')">Delete</button>
                     </li>
                     </p>
                 </li>
@@ -123,6 +170,58 @@
         </div>
         {% endfor %}
     </div>
+    <button class="add-project-btn" id="addProjectBtn" onclick="openAddProjectModal()">Add New Project</button>
+
+    <div id="addProjectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="text-align: center;">Add New Project</h2>
+            <form id="addProjectForm" action="{% url 'add_project' %}" method="POST" style="text-align: center;">
+                {% csrf_token %}
+                <label for="name" style="display: block; margin-bottom: 10px;">Name:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+                
+                <label for="description" style="display: block; margin-bottom: 10px;">Description:</label>
+                <textarea id="description" name="description" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"></textarea><br>
+                
+                <label for="start_date" style="display: block; margin-bottom: 10px;">Start Date:</label>
+                <input type="date" id="start_date" name="start_date" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+                
+                <label for="end_date" style="display: block; margin-bottom: 10px;">End Date:</label>
+                <input type="date" id="end_date" name="end_date" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+                
+                
+                <input type="submit" class="add-event-btn" value="Submit" style="background-color: #009688; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+            </form>
+        </div>
+    </div>
+
+
+<!-- Edit project modal -->
+<div id="editProjectModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 style="text-align: center;">Edit Project</h2>
+        <form id="editProjectForm" method="POST" style="text-align: center;">
+            {% csrf_token %}
+            <input type="hidden" id="editProjectId" name="editProjectId">
+            <label for="editName" style="display: block; margin-bottom: 10px;">Name:</label>
+            <input type="text" id="editName" name="editName" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+            
+            <label for="editDescription" style="display: block; margin-bottom: 10px;">Description:</label>
+            <textarea id="editDescription" name="editDescription" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"></textarea><br>
+            
+            <label for="editStartDate" style="display: block; margin-bottom: 10px;">Start Date:</label>
+            <input type="date" id="editStartDate" name="editStartDate" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+            
+            <label for="editEndDate" style="display: block; margin-bottom: 10px;">End Date:</label>
+            <input type="date" id="editEndDate" name="editEndDate" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box;"><br>
+            
+            <input type="submit" class="add-event-btn" value="Submit" style="background-color: #009688; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">
+        </form>
+    </div>
+</div>
+
 
     <script>
         function recordParticipation(projectId) {
@@ -173,6 +272,73 @@
                 alert('An error occurred while canceling the participation');
             });
         }
+        var modal = document.getElementById("addProjectModal");
+        var btn = document.getElementById("addProjectBtn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+// Function to open edit project modal and populate fields with project details
+function openEditProjectModal(id, name, description, startDate, endDate) {
+    var modal = document.getElementById("editProjectModal");
+    var editName = document.getElementById("editName");
+    var editDescription = document.getElementById("editDescription");
+    var editStartDate = document.getElementById("editStartDate");
+    var editEndDate = document.getElementById("editEndDate");
+
+    document.getElementById("editProjectId").value = id;
+    editName.value = name;
+    editDescription.value = description;
+    editStartDate.value = startDate;
+    editEndDate.value = endDate;
+
+    modal.style.display = "block";
+}
+
+// Function to handle form submission for editing project
+document.getElementById("editProjectForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var form = event.target;
+    var formData = new FormData(form);
+    var projectId = formData.get('editProjectId');
+
+    fetch(`/projects/${projectId}/edit/`, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': '{{ csrf_token }}'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json(); 
+        } else if (response.status === 400) {
+            return response.json();
+        } else {
+            throw new Error('Network response was not ok.'); 
+        }
+    })
+    .then(data => {
+        alert(data.message); 
+        location.reload(); // Reload the page after successful edit
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while editing the project.');
+    });
+});
+
 </script>
 </body>
 </html>

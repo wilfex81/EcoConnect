@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .forms import RegistrationForm,EventForm
+from .forms import RegistrationForm, EventForm, ProjectForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
@@ -31,7 +31,8 @@ def user_login(request):
 
 def register(request):
     return render(request, 'registration/registration.html')
-    
+
+
 def register_user(request):
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
@@ -45,6 +46,7 @@ def register_user(request):
 
 def get_projects(request):
     projects = Project.objects.all()
+    print("project came back", projects)
     context = {
         "projects": projects,
     }
@@ -63,21 +65,59 @@ def participate_in_project(request, project_id):
         else:
             return JsonResponse({'message': 'Already participating in this project.😁'}, status=400)
 
+
 def cancel_event_participation(request, event_id):
     user = request.user
     try:
         event = Event.objects.get(pk=event_id)
     except Event.DoesNotExist:
         return JsonResponse({'message': 'Event not found.'}, status=404)
-    
+
     try:
         participation = EventsParticipants.objects.get(user=user, event=event)
     except EventsParticipants.DoesNotExist:
-        return JsonResponse ({'message': 'You are not participating in this event.😭'},status=400)
-    
+        return JsonResponse({'message': 'You are not participating in this event.😭'} ,status=400)
+
     participation.delete()
     return JsonResponse({'message': 'Participation canceled successfully.😊'})
-    
+
+
+def add_project(request):
+    if request.method == 'POST':
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('projects')
+    else:
+        form = ProjectForm()
+    return render(request, 'projects.html', {'form': form})
+
+
+def project_details(request, project_id):
+    project = get_object_or_404(Project, pk=project_id)
+    data = {
+        'id': project.id,
+        'name': project.name,
+        'description': project.description,
+        'start_date': project.start_date,
+        'end_date': project.end_date
+    }
+    return JsonResponse(data)
+
+
+def edit_project(request, project_id):
+    project = get_object_or_404(Project, pk=project_id)
+    if request.method == 'POST':
+        form = ProjectForm(request.POST, instance=project)
+        print("here I have form", form)
+        if form.is_valid():
+            form.save()
+            return redirect('projects')
+    else:
+        form = ProjectForm(instance=project)
+    context = {'form': form, 'project_id': project_id}
+    return render(request, 'projects.html', context)
+
 
 
 def get_events(request):
@@ -100,23 +140,25 @@ def participate_in_event(request, event_id):
             return JsonResponse({'message': 'Participation recorded successfully.😊'})
         else:
             return JsonResponse({'message': 'Already participating in this event.😁'}, status=400)
-        
-        
+
+
 def cancel_project_participation(request, project_id):
     user = request.user
     try:
         project = Project.objects.get(pk=project_id)
     except Project.DoesNotExist:
         return JsonResponse({'message': 'Project not found.'}, status=404)
-    
+
     try:
-        participation = ProjectParticipant.objects.get(user=user, project=project)
+        participation = ProjectParticipant.objects.get(
+            user=user, project=project)
     except ProjectParticipant.DoesNotExist:
-        return JsonResponse ({'message': 'You are not participating in this project.😭'},status=400)
-    
+        return JsonResponse({'message': 'You are not participating in this project.😭'} ,status=400)
+
     participation.delete()
     return JsonResponse({'message': 'Participation canceled successfully.😊'})
-    
+
+
 def add_event(request):
     if request.method == 'POST':
         form = EventForm(request.POST)
@@ -126,6 +168,7 @@ def add_event(request):
     else:
         form = EventForm()
     return render(request, 'events.html', {'form': form})
+
 
 def event_details(request, event_id):
     event = get_object_or_404(Event, pk=event_id)
@@ -165,6 +208,7 @@ def delete_event(request, event_id):
 
     return render(request, 'events.html', {'event': event})
 
+
 def get_community(request):
     communities = Community.objects.all()
     context = {
@@ -184,18 +228,19 @@ def join_community(request, community_id):
         else:
             return JsonResponse({'message': 'Already a member of this community.😁'}, status=400)
 
+
 def cancel_community_mebership(request, community_id):
     user = request.user
     try:
         community = Community.objects.get(pk=community_id)
     except Community.DoesNotExist:
         return JsonResponse({'message': 'Community not found.'}, status=404)
-    
+
     try:
-        membership = CommunityMembership.objects.get(user=user, community=community)
+        membership = CommunityMembership.objects.get(
+            user=user, community=community)
     except CommunityMembership.DoesNotExist:
-        return JsonResponse ({'message': 'You are not a member of this community.😭'},status=400)
-    
+        return JsonResponse({'message': 'You are not a member of this community.😭'} ,status=400)
+
     membership.delete()
     return JsonResponse({'message': 'Community membership canceled successfully.😊'})
-      
