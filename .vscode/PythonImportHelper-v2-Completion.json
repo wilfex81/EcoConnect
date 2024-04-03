@@ -1031,7 +1031,7 @@
         "kind": 5,
         "importPath": "config.urls",
         "description": "config.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(\"eco.urls\")),\n    path('api/v1/', include(\"apis.urls\")),\n    path('accounts/', include('django.contrib.auth.urls')),\n]\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(\"eco.urls\")),\n    path('accounts/', include('django.contrib.auth.urls')),\n]\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
         "detail": "config.urls",
         "documentation": {}
     },
