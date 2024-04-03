@@ -1006,7 +1006,16 @@
         "kind": 5,
         "importPath": "config.wsgi",
         "description": "config.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
+        "peekOfCode": "application = get_wsgi_application()\napp = application",
+        "detail": "config.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "config.wsgi",
+        "description": "config.wsgi",
+        "peekOfCode": "app = application",
         "detail": "config.wsgi",
         "documentation": {}
     },
