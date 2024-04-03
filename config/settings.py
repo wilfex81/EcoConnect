@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app'] 
 
 
 # Application definition
@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'apis',
-    'oauth2_provider',
     'corsheaders',
 ]
 
@@ -81,12 +80,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES = {}
 
 
 # Password validation
