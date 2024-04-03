@@ -1,19 +1,13 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-
-
-from rest_framework import generics, status
-from rest_framework.response import Response
-from oauth2_provider.models import AccessToken
-from oauth2_provider.settings import oauth2_settings
-from django.contrib.auth.models import User
-from .models import (Notification, UserProfile, Post, Project, Event,
+from rest_framework import generics
+from .models import (UserProfile, Post, Project, Event,
                      Community, Membership, Comment, Like)
-from .serializers import (UserProfileSerializer, PostSerializer, ProjectSerializer,
+from .serializers import (UserProfileSerializer, PostSerializer, 
+                          ProjectSerializer,
                           EventSerializer, CommunitySerializer,
                           MembershipSerializer, CommentSerializer,
-                          LikeSerializer, UserSerializer)
-    
+                          LikeSerializer)
+
+
 class UserProfileListCreate(generics.ListCreateAPIView):
     queryset = UserProfile.objects.all()
     serializer_class = UserProfileSerializer

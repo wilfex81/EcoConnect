@@ -1,0 +1,1319 @@
+[
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "django.utils",
+        "description": "django.utils",
+        "isExtraImport": true,
+        "detail": "django.utils",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Community",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "CommunityMembership",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "EventsParticipants",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectParticipant",
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "isExtraImport": true,
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apis.migrations.0001_initial",
+        "description": "apis.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Community',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "apis.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "apis.migrations.0002_alter_project_start_date",
+        "description": "apis.migrations.0002_alter_project_start_date",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('apis', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='project',\n            name='start_date',\n            field=models.DateTimeField(),\n        ),",
+        "detail": "apis.migrations.0002_alter_project_start_date",
+        "documentation": {}
+    },
+    {
+        "label": "ApisConfig",
+        "kind": 6,
+        "importPath": "apis.apps",
+        "description": "apis.apps",
+        "peekOfCode": "class ApisConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'apis'\n    # def ready(self):\n    #     import apis.signals",
+        "detail": "apis.apps",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfile",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class UserProfile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    bio = models.TextField(blank=True)\n    location = models.CharField(max_length = 100,blank=True)\n    profile_picture = models.ImageField(upload_to='profile_pictures/', blank=True)\n    def __str__(self):\n        return self.user.username\nclass Post(models.Model):\n    user  = models.ForeignKey(User, on_delete=models.CASCADE)\n    content = models.TextField()",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Post",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Post(models.Model):\n    user  = models.ForeignKey(User, on_delete=models.CASCADE)\n    content = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now = True)\n    def __str__(self):\n        return f\"Post by {self.user.username}\"\nclass Project(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Project(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    start_date = models.DateTimeField()\n    end_date = models.DateTimeField()\n    def __str__(self):\n        return self.name\nclass ProjectParticipant(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    project = models.ForeignKey(Project, on_delete=models.CASCADE)",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectParticipant",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class ProjectParticipant(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    project = models.ForeignKey(Project, on_delete=models.CASCADE)\n    joined_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user.username} - {self.project.name}\"\nclass Event(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    location = models.CharField(max_length=255)",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Event(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    location = models.CharField(max_length=255)\n    date = models.DateField()\n    time = models.TimeField()\n    def __str__(self):\n        return self.name\nclass EventsParticipants(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "EventsParticipants",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class EventsParticipants(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    event = models.ForeignKey(Event, on_delete=models.CASCADE)\n    joined_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user.username} - {self.event.name}\"\nclass Community(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    def __str__(self):",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Community",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Community(models.Model):\n    name = models.CharField(max_length=255)\n    description = models.TextField()\n    def __str__(self):\n        return self.name\nclass CommunityMembership(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    community = models.ForeignKey(Community, on_delete=models.CASCADE)\n    joined_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "CommunityMembership",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class CommunityMembership(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    community = models.ForeignKey(Community, on_delete=models.CASCADE)\n    joined_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user.username} - {self.community.name}\"\nclass Membership(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    community = models.ForeignKey(Community, on_delete=models.CASCADE)\n    role = models.CharField(max_length=50)",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Membership",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Membership(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    community = models.ForeignKey(Community, on_delete=models.CASCADE)\n    role = models.CharField(max_length=50)\n    def __str__(self):\n        return f\"{self.user.username} - {self.community.name}\"\nclass Comment(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    post = models.ForeignKey(Post, on_delete=models.CASCADE)\n    content = models.TextField()",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Comment",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Comment(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    post = models.ForeignKey(Post, on_delete=models.CASCADE)\n    content = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"Comment by {self.user.username}\"   \nclass Like(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    post = models.ForeignKey(Post, on_delete=models.CASCADE)",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Like",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Like(models.Model):\n    user = models.ForeignKey(User, on_delete=models.CASCADE)\n    post = models.ForeignKey(Post, on_delete=models.CASCADE)\n    def __str__(self):\n        return f\"Like by {self.user.username}\"\nclass Notification(models.Model):\n    recipient = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notifications')\n    message = models.TextField()\n    timestamp = models.DateTimeField(auto_now_add=True)\n    is_read = models.BooleanField(default=False)",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "Notification",
+        "kind": 6,
+        "importPath": "apis.models",
+        "description": "apis.models",
+        "peekOfCode": "class Notification(models.Model):\n    recipient = models.ForeignKey(User, on_delete=models.CASCADE, related_name='notifications')\n    message = models.TextField()\n    timestamp = models.DateTimeField(auto_now_add=True)\n    is_read = models.BooleanField(default=False)\n    def __str__(self):\n        return f\"{self.user.recipient} - {self.message}\"",
+        "detail": "apis.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class UserSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = User\n        fields = ['username', 'password', 'email']\n        extra_kwargs = {'password': {'write_only': True}}\n    def create(self, validate_data):\n        user = User.objects.create_user(**validate_data)\n        return user\nclass UserProfileSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfileSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class UserProfileSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = UserProfile\n        fields = '__all__'\nclass PostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = '__all__'\nclass ProjectSerializer(serializers.ModelSerializer):\n    participants = serializers.SerializerMethodField()",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PostSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class PostSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Post\n        fields = '__all__'\nclass ProjectSerializer(serializers.ModelSerializer):\n    participants = serializers.SerializerMethodField()\n    creator = serializers.SerializerMethodField()\n    class Meta:\n        model = Project\n        fields = '__all__'",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class ProjectSerializer(serializers.ModelSerializer):\n    participants = serializers.SerializerMethodField()\n    creator = serializers.SerializerMethodField()\n    class Meta:\n        model = Project\n        fields = '__all__'\n    def get_participants(self, obj):\n        return [participant.username for participant in obj.participants.all()]\n    def get_creator(self, obj):\n        return obj.creator.username",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "EventSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class EventSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Event\n        fields = '__all__'\nclass CommunitySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Community\n        fields = '__all__'\nclass MembershipSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CommunitySerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class CommunitySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Community\n        fields = '__all__'\nclass MembershipSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Membership\n        fields = '__all__'\nclass CommentSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "MembershipSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class MembershipSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Membership\n        fields = '__all__'\nclass CommentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Comment\n        fields = '__all__'\nclass LikeSerializer(serializers.ModelSerializer):\n    class Meta:",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CommentSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class CommentSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Comment\n        fields = '__all__'\nclass LikeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Like\n        fields = '__all__'",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "LikeSerializer",
+        "kind": 6,
+        "importPath": "apis.serializers",
+        "description": "apis.serializers",
+        "peekOfCode": "class LikeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Like\n        fields = '__all__'",
+        "detail": "apis.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "apis.urls",
+        "description": "apis.urls",
+        "peekOfCode": "urlpatterns = [\n    path('userprofiles/', UserProfileListCreate.as_view(), name='userprofile-list-create'),\n    path('userprofiles/<int:pk>/', UserProfileDetail.as_view(), name='userprofile-detail'),\n    path('posts/', PostListCreate.as_view(), name='post-list-create'),\n    path('posts/<int:pk>/', PostDetail.as_view(), name='post-detail'),\n    path('projects/', ProjectListCreate.as_view(), name='project-list-create'),\n    path('projects/<int:pk>/', ProjectDetail.as_view(), name='project-detail'),\n    path('events/', EventListCreate.as_view(), name='event-list-create'),\n    path('events/<int:pk>/', EventDetail.as_view(), name='event-detail'),\n    path('communities/', CommunityListCreate.as_view(), name='community-list-create'),",
+        "detail": "apis.urls",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfileListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class UserProfileListCreate(generics.ListCreateAPIView):\n    queryset = UserProfile.objects.all()\n    serializer_class = UserProfileSerializer\nclass UserProfileDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = UserProfile.objects.all()\n    serializer_class = UserProfileSerializer\nclass PostListCreate(generics.ListCreateAPIView):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer\nclass PostDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "UserProfileDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class UserProfileDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = UserProfile.objects.all()\n    serializer_class = UserProfileSerializer\nclass PostListCreate(generics.ListCreateAPIView):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer\nclass PostDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer\nclass ProjectListCreate(generics.ListCreateAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "PostListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class PostListCreate(generics.ListCreateAPIView):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer\nclass PostDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer\nclass ProjectListCreate(generics.ListCreateAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass ProjectDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "PostDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class PostDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Post.objects.all()\n    serializer_class = PostSerializer\nclass ProjectListCreate(generics.ListCreateAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass ProjectDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass EventListCreate(generics.ListCreateAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class ProjectListCreate(generics.ListCreateAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass ProjectDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass EventListCreate(generics.ListCreateAPIView):\n    queryset = Event.objects.all()\n    serializer_class = EventSerializer\nclass EventDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class ProjectDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Project.objects.all()\n    serializer_class = ProjectSerializer\nclass EventListCreate(generics.ListCreateAPIView):\n    queryset = Event.objects.all()\n    serializer_class = EventSerializer\nclass EventDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Event.objects.all()\n    serializer_class = EventSerializer\nclass CommunityListCreate(generics.ListCreateAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "EventListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class EventListCreate(generics.ListCreateAPIView):\n    queryset = Event.objects.all()\n    serializer_class = EventSerializer\nclass EventDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Event.objects.all()\n    serializer_class = EventSerializer\nclass CommunityListCreate(generics.ListCreateAPIView):\n    queryset = Community.objects.all()\n    serializer_class = CommunitySerializer\nclass CommunityDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "EventDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class EventDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Event.objects.all()\n    serializer_class = EventSerializer\nclass CommunityListCreate(generics.ListCreateAPIView):\n    queryset = Community.objects.all()\n    serializer_class = CommunitySerializer\nclass CommunityDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Community.objects.all()\n    serializer_class = CommunitySerializer\nclass MembershipListCreate(generics.ListCreateAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommunityListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class CommunityListCreate(generics.ListCreateAPIView):\n    queryset = Community.objects.all()\n    serializer_class = CommunitySerializer\nclass CommunityDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Community.objects.all()\n    serializer_class = CommunitySerializer\nclass MembershipListCreate(generics.ListCreateAPIView):\n    queryset = Membership.objects.all()\n    serializer_class = MembershipSerializer\nclass MembershipDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommunityDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class CommunityDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Community.objects.all()\n    serializer_class = CommunitySerializer\nclass MembershipListCreate(generics.ListCreateAPIView):\n    queryset = Membership.objects.all()\n    serializer_class = MembershipSerializer\nclass MembershipDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Membership.objects.all()\n    serializer_class = MembershipSerializer\nclass CommentListCreate(generics.ListCreateAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "MembershipListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class MembershipListCreate(generics.ListCreateAPIView):\n    queryset = Membership.objects.all()\n    serializer_class = MembershipSerializer\nclass MembershipDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Membership.objects.all()\n    serializer_class = MembershipSerializer\nclass CommentListCreate(generics.ListCreateAPIView):\n    queryset = Comment.objects.all()\n    serializer_class = CommentSerializer\nclass CommentDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "MembershipDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class MembershipDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Membership.objects.all()\n    serializer_class = MembershipSerializer\nclass CommentListCreate(generics.ListCreateAPIView):\n    queryset = Comment.objects.all()\n    serializer_class = CommentSerializer\nclass CommentDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Comment.objects.all()\n    serializer_class = CommentSerializer\nclass LikeListCreate(generics.ListCreateAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommentListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class CommentListCreate(generics.ListCreateAPIView):\n    queryset = Comment.objects.all()\n    serializer_class = CommentSerializer\nclass CommentDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Comment.objects.all()\n    serializer_class = CommentSerializer\nclass LikeListCreate(generics.ListCreateAPIView):\n    queryset = Like.objects.all()\n    serializer_class = LikeSerializer\nclass LikeDetail(generics.RetrieveUpdateDestroyAPIView):",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "CommentDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class CommentDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Comment.objects.all()\n    serializer_class = CommentSerializer\nclass LikeListCreate(generics.ListCreateAPIView):\n    queryset = Like.objects.all()\n    serializer_class = LikeSerializer\nclass LikeDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Like.objects.all()\n    serializer_class = LikeSerializer",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "LikeListCreate",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class LikeListCreate(generics.ListCreateAPIView):\n    queryset = Like.objects.all()\n    serializer_class = LikeSerializer\nclass LikeDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Like.objects.all()\n    serializer_class = LikeSerializer",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "LikeDetail",
+        "kind": 6,
+        "importPath": "apis.views",
+        "description": "apis.views",
+        "peekOfCode": "class LikeDetail(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Like.objects.all()\n    serializer_class = LikeSerializer",
+        "detail": "apis.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "config.asgi",
+        "description": "config.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "config.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j('\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j('\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "ALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'eco',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'eco',\n    'rest_framework',\n    'rest_framework.authtoken',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "ROOT_URLCONF = 'config.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'config.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.0/ref/settings/#databases\nDATABASES = {}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "DATABASES = {}\n# Password validation\n# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ORIGIN_ALLOW_ALL",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "CORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "config.urls",
+        "description": "config.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(\"eco.urls\")),\n    path('api/v1/', include(\"apis.urls\")),\n    path('accounts/', include('django.contrib.auth.urls')),\n]",
+        "detail": "config.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "config.wsgi",
+        "description": "config.wsgi",
+        "peekOfCode": "application = get_wsgi_application()\napp = application",
+        "detail": "config.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "config.wsgi",
+        "description": "config.wsgi",
+        "peekOfCode": "app = application",
+        "detail": "config.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "eco.migrations.0001_initial",
+        "description": "eco.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Campaign',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('title', models.CharField(max_length=255)),",
+        "detail": "eco.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "EcoConfig",
+        "kind": 6,
+        "importPath": "eco.apps",
+        "description": "eco.apps",
+        "peekOfCode": "class EcoConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'eco'",
+        "detail": "eco.apps",
+        "documentation": {}
+    },
+    {
+        "label": "RegistrationForm",
+        "kind": 6,
+        "importPath": "eco.forms",
+        "description": "eco.forms",
+        "peekOfCode": "class RegistrationForm(UserCreationForm):\n    class Meta:\n        model = User\n        fields = ['username', 'email', 'password1', 'password2']\nclass EventForm(forms.ModelForm):\n    class Meta:\n        model = Event\n        fields = ['name', 'description', 'location', 'date', 'time']\nclass ProjectForm(forms.ModelForm):\n    class Meta:",
+        "detail": "eco.forms",
+        "documentation": {}
+    },
+    {
+        "label": "EventForm",
+        "kind": 6,
+        "importPath": "eco.forms",
+        "description": "eco.forms",
+        "peekOfCode": "class EventForm(forms.ModelForm):\n    class Meta:\n        model = Event\n        fields = ['name', 'description', 'location', 'date', 'time']\nclass ProjectForm(forms.ModelForm):\n    class Meta:\n        model = Project\n        fields = ['name', 'description', 'start_date', 'end_date']",
+        "detail": "eco.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectForm",
+        "kind": 6,
+        "importPath": "eco.forms",
+        "description": "eco.forms",
+        "peekOfCode": "class ProjectForm(forms.ModelForm):\n    class Meta:\n        model = Project\n        fields = ['name', 'description', 'start_date', 'end_date']",
+        "detail": "eco.forms",
+        "documentation": {}
+    },
+    {
+        "label": "Project",
+        "kind": 6,
+        "importPath": "eco.models",
+        "description": "eco.models",
+        "peekOfCode": "class Project(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    start_date = models.DateField()\n    end_date = models.DateField()\nclass Event(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    date = models.DateField()\n    location = models.CharField(max_length=255)",
+        "detail": "eco.models",
+        "documentation": {}
+    },
+    {
+        "label": "Event",
+        "kind": 6,
+        "importPath": "eco.models",
+        "description": "eco.models",
+        "peekOfCode": "class Event(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    date = models.DateField()\n    location = models.CharField(max_length=255)\nclass Discussion(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\nclass Resource(models.Model):",
+        "detail": "eco.models",
+        "documentation": {}
+    },
+    {
+        "label": "Discussion",
+        "kind": 6,
+        "importPath": "eco.models",
+        "description": "eco.models",
+        "peekOfCode": "class Discussion(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\nclass Resource(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    url = models.URLField()\nclass Campaign(models.Model):\n    title = models.CharField(max_length=255)",
+        "detail": "eco.models",
+        "documentation": {}
+    },
+    {
+        "label": "Resource",
+        "kind": 6,
+        "importPath": "eco.models",
+        "description": "eco.models",
+        "peekOfCode": "class Resource(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    url = models.URLField()\nclass Campaign(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\nclass VolunteerOpportunity(models.Model):\n    title = models.CharField(max_length=255)",
+        "detail": "eco.models",
+        "documentation": {}
+    },
+    {
+        "label": "Campaign",
+        "kind": 6,
+        "importPath": "eco.models",
+        "description": "eco.models",
+        "peekOfCode": "class Campaign(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\nclass VolunteerOpportunity(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    organization = models.CharField(max_length=255)\n    location = models.CharField(max_length=255)",
+        "detail": "eco.models",
+        "documentation": {}
+    },
+    {
+        "label": "VolunteerOpportunity",
+        "kind": 6,
+        "importPath": "eco.models",
+        "description": "eco.models",
+        "peekOfCode": "class VolunteerOpportunity(models.Model):\n    title = models.CharField(max_length=255)\n    description = models.TextField()\n    organization = models.CharField(max_length=255)\n    location = models.CharField(max_length=255)",
+        "detail": "eco.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "eco.urls",
+        "description": "eco.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', home, name='home'),\n    path('login/', user_login, name='login_submit'),\n    path('register/', register, name='registration'),\n    path('registration/', register_user, name='registration_submit'),\n    path('projects/', get_projects, name='projects'),\n    path('participate-in-project/<int:project_id>/',\n         participate_in_project, name='participate_in_project'),\n    path('cancel_participation-in-project/<int:project_id>/',\n         cancel_project_participation, name='cancel_project_participation'),",
+        "detail": "eco.urls",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def home(request):\n    return render(request, 'home.html')\ndef user_login(request):\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return redirect('home')",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "user_login",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def user_login(request):\n    if request.method == 'POST':\n        username = request.POST.get('username')\n        password = request.POST.get('password')\n        user = authenticate(request, username=username, password=password)\n        if user is not None:\n            login(request, user)\n            return redirect('home')\n        else:\n            messages.error(request, 'Invalid username or password')",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "register",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def register(request):\n    return render(request, 'registration/registration.html')\ndef register_user(request):\n    if request.method == 'POST':\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('login')\n    else:\n        form = RegistrationForm()",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "register_user",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def register_user(request):\n    if request.method == 'POST':\n        form = RegistrationForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('login')\n    else:\n        form = RegistrationForm()\n    return render(request, 'registration/registration.html', {'form': form})\ndef get_projects(request):",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_projects",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def get_projects(request):\n    projects = Project.objects.all()\n    print(\"project came back\", projects)\n    context = {\n        \"projects\": projects,\n    }\n    return render(request, 'projects.html', context)\ndef participate_in_project(request, project_id):\n    if request.method == 'POST':\n        project = get_object_or_404(Project, pk=project_id)",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "participate_in_project",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def participate_in_project(request, project_id):\n    if request.method == 'POST':\n        project = get_object_or_404(Project, pk=project_id)\n        user = request.user\n        membership, participating = ProjectParticipant.objects.get_or_create(\n            user=request.user, project=project\n        )\n        if participating:\n            return JsonResponse({'message': 'Participation recorded successfully.😊'})\n        else:",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "cancel_event_participation",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def cancel_event_participation(request, event_id):\n    user = request.user\n    try:\n        event = Event.objects.get(pk=event_id)\n    except Event.DoesNotExist:\n        return JsonResponse({'message': 'Event not found.'}, status=404)\n    try:\n        participation = EventsParticipants.objects.get(user=user, event=event)\n    except EventsParticipants.DoesNotExist:\n        return JsonResponse({'message': 'You are not participating in this event.😭'} ,status=400)",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_project",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def add_project(request):\n    if request.method == 'POST':\n        form = ProjectForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('projects')\n    else:\n        form = ProjectForm()\n    return render(request, 'projects.html', {'form': form})\ndef project_details(request, project_id):",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "project_details",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def project_details(request, project_id):\n    project = get_object_or_404(Project, pk=project_id)\n    data = {\n        'id': project.id,\n        'name': project.name,\n        'description': project.description,\n        'start_date': project.start_date,\n        'end_date': project.end_date\n    }\n    return JsonResponse(data)",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "edit_project",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def edit_project(request, project_id):\n    project = get_object_or_404(Project, pk=project_id)\n    if request.method == 'POST':\n        form = ProjectForm(request.POST, instance=project)\n        print(\"here I have form\", form)\n        if form.is_valid():\n            form.save()\n            return redirect('projects')\n    else:\n        form = ProjectForm(instance=project)",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_events",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def get_events(request):\n    events = Event.objects.all()\n    context = {\n        \"events\": events,\n    }\n    return render(request, 'events.html', context)\ndef participate_in_event(request, event_id):\n    if request.method == 'POST':\n        event = get_object_or_404(Event, pk=event_id)\n        user = request.user",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "participate_in_event",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def participate_in_event(request, event_id):\n    if request.method == 'POST':\n        event = get_object_or_404(Event, pk=event_id)\n        user = request.user\n        membership, participating = EventsParticipants.objects.get_or_create(\n            user=request.user, event=event\n        )\n        if participating:\n            return JsonResponse({'message': 'Participation recorded successfully.😊'})\n        else:",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "cancel_project_participation",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def cancel_project_participation(request, project_id):\n    user = request.user\n    try:\n        project = Project.objects.get(pk=project_id)\n    except Project.DoesNotExist:\n        return JsonResponse({'message': 'Project not found.'}, status=404)\n    try:\n        participation = ProjectParticipant.objects.get(\n            user=user, project=project)\n    except ProjectParticipant.DoesNotExist:",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_event",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def add_event(request):\n    if request.method == 'POST':\n        form = EventForm(request.POST)\n        if form.is_valid():\n            form.save()\n            return redirect('events')\n    else:\n        form = EventForm()\n    return render(request, 'events.html', {'form': form})\ndef event_details(request, event_id):",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "event_details",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def event_details(request, event_id):\n    event = get_object_or_404(Event, pk=event_id)\n    data = {\n        'id': event.id,\n        'name': event.name,\n        'description': event.description,\n        'location': event.location,\n        'date': event.date,\n        'time': event.time\n    }",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "edit_event",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def edit_event(request, event_id):\n    event = get_object_or_404(Event, pk=event_id)\n    if request.method == 'PUT':\n        form = EventForm(request.POST, instance=event)\n        if form.is_valid():\n            form.save()\n            return JsonResponse({'message': 'Event updated successfully.'})\n        else:\n            return JsonResponse({'error': 'Invalid form data.'}, status=400)\n    else:",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_event",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def delete_event(request, event_id):\n    # Retrieve the event object from the database\n    event = get_object_or_404(Event, pk=event_id)\n    if request.method == 'POST':\n        event.delete()\n        return redirect('events')\n    return render(request, 'events.html', {'event': event})\ndef get_community(request):\n    communities = Community.objects.all()\n    context = {",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "get_community",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def get_community(request):\n    communities = Community.objects.all()\n    context = {\n        'communities': communities,\n    }\n    return render(request, 'communities.html', context)\ndef join_community(request, community_id):\n    if request.method == 'POST':\n        community = get_object_or_404(Community, pk=community_id)\n        user = request.user",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "join_community",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def join_community(request, community_id):\n    if request.method == 'POST':\n        community = get_object_or_404(Community, pk=community_id)\n        user = request.user\n        membership, created = CommunityMembership.objects.get_or_create(\n            user=request.user, community=community)\n        if created:\n            return JsonResponse({'message': 'Joined community successfully.😊'})\n        else:\n            return JsonResponse({'message': 'Already a member of this community.😁'}, status=400)",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "cancel_community_mebership",
+        "kind": 2,
+        "importPath": "eco.views",
+        "description": "eco.views",
+        "peekOfCode": "def cancel_community_mebership(request, community_id):\n    user = request.user\n    try:\n        community = Community.objects.get(pk=community_id)\n    except Community.DoesNotExist:\n        return JsonResponse({'message': 'Community not found.'}, status=404)\n    try:\n        membership = CommunityMembership.objects.get(\n            user=user, community=community)\n    except CommunityMembership.DoesNotExist:",
+        "detail": "eco.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
