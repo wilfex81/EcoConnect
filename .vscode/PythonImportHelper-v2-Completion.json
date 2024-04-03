@@ -25,6 +25,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -288,6 +296,14 @@
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
         "documentation": {}
     },
     {
@@ -826,7 +842,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j('\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j('\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -835,7 +851,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j('\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-*^s1%0l*6q@!d)w*j$s9+%y1y8mz009u_#a%t4lit8d9p^%-j('\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -844,7 +860,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -853,7 +869,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['.vercel.app'] \n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'eco',",
+        "peekOfCode": "ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'eco',",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -925,7 +941,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -934,7 +950,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -943,7 +959,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -952,7 +968,7 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.0/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -961,7 +977,25 @@
         "kind": 5,
         "importPath": "config.settings",
         "description": "config.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "config.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "config.settings",
+        "description": "config.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:3000',\n]\nCORS_ORIGIN_ALLOW_ALL = True",
         "detail": "config.settings",
         "documentation": {}
     },
@@ -997,7 +1031,7 @@
         "kind": 5,
         "importPath": "config.urls",
         "description": "config.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(\"eco.urls\")),\n    path('api/v1/', include(\"apis.urls\")),\n    path('accounts/', include('django.contrib.auth.urls')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(\"eco.urls\")),\n    path('api/v1/', include(\"apis.urls\")),\n    path('accounts/', include('django.contrib.auth.urls')),\n]\nurlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)\nurlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)",
         "detail": "config.urls",
         "documentation": {}
     },
