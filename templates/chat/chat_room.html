@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+        #user-panel, #community-panel {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto; /* Enable vertical scrolling */
+        }
+        #user-panel {
+            background-color: #f9f9f9;
+        }
+        #community-panel {
+            background-color: #e0e0e0;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .message strong {
+            font-weight: bold;
+            color: #333;
+        }
+        .typing {
+            color: #999;
+            font-style: italic;
+        }
+        #message-input, #community-reply {
+            width: calc(100% - 70px); /* Adjust input width to leave space for the button */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #message-form button, #community-reply button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        #message-form button:hover, #community-reply button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#message-form').submit(function(event) {
+                event.preventDefault();
+                var messageInput = $('#message-input').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "send_message" room.id %}',
+                    data: {
+                        'content': messageInput,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data.success) {
+                            // Update user panel
+                            $('#user-panel').append('<div class="message"><strong>{{ request.user.username }}</strong>: ' + messageInput + '</div>');
+                            // Update community panel
+                            $('#community-panel').append('<div class="message"><strong>{{ request.user.username }}</strong>: ' + messageInput + '</div>');
+                            $('#message-input').val('');
+                        } else {
+                            alert('Failed to send message.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+    
+            $('#community-reply-form').submit(function(event) {
+                event.preventDefault();
+                var replyInput = $('#community-reply-input').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '{% url "send_community_reply" room.id %}',
+                    data: {
+                        'content': replyInput,
+                        'csrfmiddlewaretoken': '{{ csrf_token }}'
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        if (data.success) {
+                            // Update community panel
+                            $('#community-panel').append('<div class="message"><strong>Community Member</strong>: ' + replyInput + '</div>');
+                            $('#community-reply-input').val('');
+                        } else {
+                            alert('Failed to send reply.');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+    
+</head>
+<body>
+    <div id="user-panel">
+        <h1>Chat Room: {{ room.name }}</h1>
+        <div id="message-container-user">
+            {% for message in messages %}
+                <div class="message">
+                    <strong>{{ message.user.username }}</strong>: {{ message.content }}
+                </div>
+            {% endfor %}
+            <div id="typing-status"></div>
+        </div>
+        <form id="message-form">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <div id="community-panel">
+        <h1>Community Chat</h1>
+        <div id="message-container-community"></div>
+        <form id="community-reply-form">
+            <input type="text" id="community-reply-input" placeholder="Reply to user...">
+            <button type="submit">Reply</button>
+        </form>
+    </div>
+</body>
+</html>

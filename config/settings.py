@@ -39,11 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'eco',
+    'chat',
     'rest_framework',
     'rest_framework.authtoken',
     'apis',
     'corsheaders',
 ]
+
+# settings.py
+LOGIN_REDIRECT_URL = '/chat/'
+LOGOUT_REDIRECT_URL = '/'  
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
